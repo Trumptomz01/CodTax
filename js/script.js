@@ -19,7 +19,7 @@ const quickSnippets = [
     icon: "fa-brands fa-js",
     programmingLanguage: "JavaScript",
     topic: "How to create a function?",
-    link:"/app/Javascript.html#create-function"
+    link:"/app/Javascript.html#js-function-declare"
 
   },
   {
@@ -57,8 +57,8 @@ const snippetContents = [
     &lt;/body&gt;
     &lt;/html&gt;
    `,
-    linkToLearn: "",
-    Reference: "",
+    linkToLearn: "https://www.w3schools.com/html/default.asp",
+    Reference: "https://www.w3schools.com/tags/",
   },
 
   {
@@ -75,8 +75,8 @@ const snippetContents = [
        height: 100vh;           /* Full viewport height */
     }
     `,
-    linkToLearn: "",
-    Reference: "",
+    linkToLearn: "https://web.dev/learn/css",
+    Reference: "https://developer.mozilla.org/en-US/docs/Web/CSS",
   },
   
   {
@@ -97,8 +97,8 @@ const snippetContents = [
        });
     </script>
     `,
-    linkToLearn: "",
-    Reference: "",
+    linkToLearn: "https://javascript.info/",
+    Reference: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference",
   },
   {
     name: "PYTHON",
@@ -115,8 +115,8 @@ const snippetContents = [
  
     greet_user()
     `,
-    linkToLearn: "",
-    Reference: "",
+    linkToLearn: "https://www.learnpython.org/",
+    Reference: "https://docs.python.org/3/reference/index.html",
   },
   {
     name: "JAVA",
@@ -135,8 +135,8 @@ const snippetContents = [
        }
     }
     `,
-    linkToLearn: "",
-    Reference: "",
+    linkToLearn: "https://www.w3schools.com/java/",
+    Reference: "https://www.w3schools.com/java/java_ref_reference.asp",
   },
 ];
 const communityHighlights = [
@@ -182,7 +182,7 @@ snippetContents.map((cards) => {
             <h1>${cards.name}</h1>
             <p>${cards.description}</p>
             <div class="links">
-               <a href="${cards.snippetLink}">View Snippets <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+               <a href="${cards.snippetLink}">View Cheat Sheet <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                <a href="${cards.linkToLearn}">Learn ${cards.name}</a>
                <a href="${cards.Reference}">${cards.name} Reference</a>   
             </div>

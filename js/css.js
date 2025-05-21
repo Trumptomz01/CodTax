@@ -325,13 +325,6 @@ const cssSections = [
       opacity: 1;
    }`
    },
-     {
-      heading:"",
-      id:"",
-      paragraph:``,
-      code:``
-   },
-   
 ]
 
 
