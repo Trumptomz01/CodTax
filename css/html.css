@@ -88,7 +88,7 @@ header h1{
    -webkit-text-fill-color: transparent;
 }
 
-header{
+/* header{
    margin: auto auto 2em auto;
    background: var(--bg-color);
    backdrop-filter: blur(5px);
@@ -96,7 +96,7 @@ header{
    position: sticky;
    z-index: 10;
    top: 60px;
-}
+} */
 
 main h2{
    margin: 0.5em auto;
