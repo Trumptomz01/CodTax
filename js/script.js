@@ -19,7 +19,7 @@ const quickSnippets = [
     icon: "fa-brands fa-js",
     programmingLanguage: "JavaScript",
     topic: "How to create a function?",
-    link:"/app/Javascript.html#js-function-declare"
+    link:"/app/javascript.html#js-function-declare"
 
   },
   {
