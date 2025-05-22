@@ -106,14 +106,12 @@ const snippetContents = [
     exampleHeading: "",
     snippetLink: "/app/python.html",
     codeSnippet: `
-    def greet_user():
-       name = input("What's your name? ").strip()
-       if not name:
-          name = "World"
-       print(f"Hello, {name}!")
-       print(f"Your name has {len(name)} characters.")
- 
-    greet_user()
+  def greet_user():
+    name= input('enter your name? : ')
+    name_output = name.replace(' ','')
+    print(f"Hello, {name_output}!")
+    print(f"Your name has {len(name_output)} characters.")
+  greet_user()
     `,
     linkToLearn: "https://www.learnpython.org/",
     Reference: "https://docs.python.org/3/reference/index.html",

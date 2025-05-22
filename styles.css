@@ -553,11 +553,12 @@ code {
   background: rgb(29, 28, 28);
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+  transition:all 0.3s ease-in-out;
 }
 
 .highlight-card:hover {
   transform: translateY(-10px);
+  filter:sepia(40%)
 }
 
 .icon-circle {
@@ -600,10 +601,20 @@ h3 {
   transform: scale(1.05);
   box-shadow: 0 1px 5px rgba(220, 248, 4, 0.2);
 }
+.footer-links div:hover{
+  /* filter: drop-shadow(); */
+  transition: all ease-in-out 0.3s;
+  filter: drop-shadow(0 6px 10px #dcf804);
+}
+.footer-links{
+  transition:filter ease-in-out 0.3s;
+
+}
 .footer-links i{
   font-size:20px;
   cursor: pointer;
   color:#dcf804;
+
 }
 .footer-links {
   color: #fff;
@@ -648,8 +659,11 @@ footer{
 .footer-content li{
   list-style: none;
   color: #bfbfbf;
-  font-size: 15px;
+  font-size: 14px;
   margin: 10px auto;
+}
+.footer-p h5{
+  color: #bfbfbf;
 }
 .footer-content a{
   text-decoration: none;
@@ -658,6 +672,8 @@ footer{
 }
 .footer-content h2{
   font-weight: 550;
+  font-size: 1.5rem;
+  color: #bfbfbf;
   margin: 0px auto 20px auto;
 }
 .footer-content a:hover{
