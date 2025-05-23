@@ -309,7 +309,10 @@ navbar li {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
 .animate-text {
   font-size: 1.3rem;
   font-weight: 700;
