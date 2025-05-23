@@ -296,19 +296,16 @@ navbar li {
   display: flex;
   gap:5%;
   background: transparent;
-  color: #fff;
+  color: #ccc;
   border: 1px solid #353535cc;
   font-size: 1rem;
   border-radius: 30px;
   padding: 6px 10px;
   transition: background 0.3s ease-in-out;
 }
-.mobile-nav-btn:active{
-  transform: translateY(4px);
-}
 .mobile-nav-btn:hover {
-  background-color: #dcf804b3;
-  color: #090909;
+  /* background-color: #dcf804b3; */
+  /* color: #090909; */
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
