@@ -1,4 +1,4 @@
-const pythonCheat = [
+export const pythonCheat = [
   {
     heading: "Variables and Data Types",
     id: "variables-data-types",
@@ -444,4 +444,6 @@ pythonCheat.map((cheats) => {
       </section>
    `
 }).join("");
-main.innerHTML = mainContainer;
+if (main) {
+   main.innerHTML = mainContainer;
+}

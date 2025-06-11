@@ -1,5 +1,138 @@
-const sections = [
-   {
+
+export const sections = [
+  {
+    heading: "Variables in JavaScript",
+    id: "js-variables",
+    paragraph: `In JavaScript, variables are used to store data values. There are three ways to declare variables: <code class="language-js"> var</code>, <code class="language-js">let</code>, and <code class="language-js">const</code>.<code class="language-js"> var</code> is function-scoped and can be redeclared and reassigned. <code class="language-js"> let</code> is block-scoped and can be reassigned but not redeclared. <code class="language-js">const</code> is block-scoped and cannot be reassigned or redeclared; it must be initialized at declaration.`,
+    code: `
+  var x = 10;
+  let y = 20;
+  const z = 30;`
+  },
+  {
+    heading: "Data Types in JavaScript",
+    id: "js-data-types",
+    paragraph: `JavaScript has several data types, including <code class="language-js">number</code>, <code class="language-js">string</code>,<code class="language-js"> boolean</code>, <code class="language-js"> null</code>, <code class="language-js"> undefined</code>, <code class="language-js"> objects</code>, and <code class="language-js">array</code>. Numbers can be integers or floats. Strings are sequences of characters. Booleans are true or false. Null represents the intentional absence of any object value. Undefined means a variable has been declared but has not yet been assigned a value. Objects are collections of key-value pairs, and arrays are ordered lists of values.`,
+    code: `
+let num = 42;
+let str = 'Hello';
+let bool = true;
+let nul = null;
+let und;
+let obj = { key: 'value' };
+let arr = [1, 2, 3];`
+  },
+  {
+    heading: "Operators in JavaScript",
+    id: "js-operators",
+    paragraph: `Operators are symbols that perform operations on one, two, or three operands and return a result. JavaScript has various types of operators, including arithmetic, comparison, and logical operators. Arithmetic operators include +, -, *, /, %. Comparison operators include <code class="language-js"> ==</code>, <code class="language-js"> ===</code>, <code class="language-js"> !=</code>, !==, <, >, <=, >=. Logical operators include &&, ||, !.`,
+    code: `
+let a = 5;
+let b = 10;
+console.log(a + b); // 15
+console.log(a == b); // false
+console.log(a < b); // true
+console.log(a && b); // 5`
+  },
+  {
+    heading: "Control Structures in JavaScript",
+    id: "js-control-structures",
+    paragraph: `Control structures allow you to control the flow of your program. Common control structures in JavaScript include <code class="language-js"> if-else statement</code>, <code class="language-js"> switch statements</code>, <code class="language-js"> for loops</code>, and <code class="language-js"> while</code> loops. If-else statements execute different blocks of code based on whether a condition is <code class="language-js"> true</code> or <code class="language-js"> false</code>. <code class="language-js"> switch</code> statements evaluate an expression and execute different blocks based on the value of that expression. <code class="language-js"> for</code> loops iterate over a block of code a specified number of times. <code class="language-js"> while</code> loops iterate as long as a specified condition is true.`,
+    code: `
+let age = 25;
+if (age >= 18) {
+  console.log('Adult');
+} else {
+  console.log('Minor');
+}
+
+for (let i = 0; i < 3; i++) {
+  console.log(i);
+}`
+  },
+  {
+    heading: "Functions in JavaScript",
+    id: "js-functions",
+    paragraph: "Functions are blocks of code that perform a specific task. They can be declared using function declarations, function expressions, or arrow functions. Functions can take parameters and return values. Function declarations are hoisted, while function expressions are not. Arrow functions provide a more concise syntax and lexically bind the this value.",
+    code: `
+function add(a, b) {
+  return a + b;
+}
+
+const subtract = function(a, b) {
+  return a - b;
+};
+
+const multiply = (a, b) => a * b;`
+  },
+  {
+    heading: "Objects in JavaScript",
+    id: "js-objects",
+    paragraph: "Objects are collections of key-value pairs. They are used to store and organize data. Properties can be accessed using dot notation or bracket notation. Objects can also have methods, which are functions associated with the object.",
+    code: `
+  const person = {
+    name: 'John',
+    age: 30,
+    greet: function() {
+      console.log('Hello');
+    }
+  };
+  console.log(person.name); // John
+  person.greet(); // Hello`
+  },
+  {
+    heading: "Arrays in JavaScript",
+    id: "js-arrays",
+    paragraph: `Arrays are ordered lists of values. They can hold elements of different data types. Arrays have various methods to manipulate and access their elements, such as <code class="language-js"> push()</code>,<code class="language-js"> pop()</code>, <code class="language-js"> map()</code>, <code class="language-js"> filter()</code>, etc.`,
+    code: `
+  const numbers = [1, 2, 3, 4, 5];
+  numbers.push(6);
+  console.log(numbers); // [1, 2, 3, 4, 5, 6]
+  const doubled = numbers.map(x => x * 2);
+  console.log(doubled); // [2, 4, 6, 8, 10, 12]`
+  },
+  {
+    heading: "Scope in JavaScript",
+    id: "js-scope",
+    paragraph: "Scope refers to the visibility of variables. JavaScript has global scope, function scope, and block scope. Variables declared with var are function-scoped, while let and const are block-scoped. Variables declared outside any function are in the global scope.",
+    code: `
+  let globalVar = 'I am global';
+  function myFunction() {
+    let localVar = 'I am local';
+    console.log(globalVar); // I am global
+    console.log(localVar); // I am local
+  }
+  myFunction();
+  // console.log(localVar); // ReferenceError: localVar is not defined`
+  },
+  {
+    heading: "Hoisting in JavaScript",
+    id: "js-hoisting",
+    paragraph: "Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope. This applies to variables declared with var, let, const, and function declarations. However, only var and function declarations are initialized during hoisting; let and const are not.",
+    code: `
+  console.log(x); // undefined
+  var x = 10;
+
+  // console.log(y); // ReferenceError: Cannot access 'y' before initialization
+  let y = 20;`
+  },
+  {
+    heading: "Closures in JavaScript",
+    id: "js-closures",
+    paragraph: "A closure is a function that has access to its own scope, the outer function's scope, and the global scope. Closures allow functions to remember their lexical scope even when they are executed outside that scope.",
+    code: `
+  function outer() {
+    let counter = 0;
+    return function inner() {
+      counter++;
+      console.log(counter);
+    };
+  }
+  const fn = outer();
+  fn(); // 1
+  fn(); // 2`
+  },
+  {
   heading: "Debounce Function",
   id: "debounce-function",
   paragraph: `Debounce ensures a function only runs after it has stopped being called for a specified time. It's useful for rate-limiting events like <code class="language-js">keypress</code> or <code class="language-js">scroll</code> handlers.`,
@@ -542,7 +675,6 @@ document.querySelector("ul").appendChild(fragment);
   `
 }
 ]
-console.log(sections.length)
 const main = document.querySelector("#page-content");
 let mainContainer = "";
 sections.map((contents) => {
@@ -561,4 +693,6 @@ sections.map((contents) => {
       </section>
    `
 }).join("");
-main.innerHTML = mainContainer;
+if (main) {
+  main.innerHTML = mainContainer;
+}

@@ -1,4 +1,4 @@
-const sections = [
+export const htmlSections = [
    {
       heading: "Basic HTML Structure",          
       id: "html-structure",               
@@ -242,7 +242,7 @@ const sections = [
 
 const main = document.querySelector("#page-content");
 let mainContainer = "";
-sections.map((contents) => {
+htmlSections.map((contents) => {
    mainContainer += `
       <section class="section" id="${contents.id}">
          <div>
@@ -258,4 +258,6 @@ sections.map((contents) => {
       </section>
    `
 }).join("");
-main.innerHTML = mainContainer;
+if (main) {
+   main.innerHTML = mainContainer;
+}

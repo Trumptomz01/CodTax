@@ -1,6 +1,6 @@
 const copyButtons = document.querySelectorAll('.copy-btn');
-const defaultCopyText = document.querySelector("#button").innerHTML;
 copyButtons.forEach((btn) => {
+  const defaultCopyText = document.querySelector("#button").innerHTML;
   btn.addEventListener("click", () => {
    const code = btn.parentElement.querySelector('code').innerText;
     navigator.clipboard.writeText(code).then(() => {
@@ -22,7 +22,6 @@ fetch('/app/navbar.html')
   .then(data => {
     document.getElementById('navbar-container').innerHTML = data;
 });
-console.log(defaultCopyText)
 window.addEventListener('load', () => {
   document.getElementById('loader').style.display = 'none';
   document.getElementById('page-content').style.display = 'block';

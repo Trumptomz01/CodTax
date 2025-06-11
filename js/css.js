@@ -1,4 +1,4 @@
-const cssSections = [
+export const cssSections = [
    {
       heading:"Basic CSS Syntax",
       id:"css-syntax",
@@ -349,4 +349,6 @@ cssSections.map((contents) => {
       </section>
    `
 }).join("");
-main.innerHTML = mainContainer;
+if (main) {
+   main.innerHTML = mainContainer;
+}

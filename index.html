@@ -13,7 +13,7 @@
    <link rel="icon" type="image/x-icon" href="/favicon.ico">
    <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body class="dark-mode">
+<body class=" dark-mode">
    <nav class="navbar">
       <li><a class="brand" href=""><h1>CodeTax</h1></a></li> 
       <ul class="nav-links">
@@ -50,10 +50,16 @@
       <section class="welcome-section" id="welcome-section">
          <div class="welcome-text">
             <h1>Build Tomorrow's Tech</h1>
-            <p> With Your one-stop solution for Coding Cheat Sheet,<br> References and Resources.</p>
-            <div class="search-bar">
-               <input type="search" class=" search search-input" placeholder="Search CodeTax, e.g HTML" aria-label="Search documentation" autocomplete="off" id="searchInput">
-               <button title="search"  class=" search search-button" id="searchButton" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <p class="welcome-sec-p"> With Your one-stop solution for Coding Cheat Sheet,<br> References and Resources.</p>
+            <div class="search-section">
+               <div class="search-bar">
+                  <input type="search" class="search search-input" placeholder="Search CodeTax, e.g HTML" aria-label="Search documentation" autocomplete="off" id="searchInput">
+                  <button title="search"  class=" search search-button" id="searchButton" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+               </div>
+              <div id="searchResults" class="searchResults">
+                  <ol id="searchLists" class=" search-lists">
+                  </ol>
+               </div>
             </div>
             <div class="animate-text">
                <code class="language-javascript">
@@ -99,7 +105,8 @@
          </div>
       </div>
    </footer>
-   <script src="/js/script.js"></script>
+   <script type="module" src="/js/script.js"></script>
+   <script type="module" src="/js/search.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-java.min.js"></script>

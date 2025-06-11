@@ -1,7 +1,3 @@
-
-// document.body.style.backgroundColor ="white"
-// const section = document.querySelector("section")
-// section.style.backgroundColor="white";
 const quickSnippets = [
   {
     icon: "fa-brands fa-html5",
@@ -271,7 +267,7 @@ const footerChild = footerLinks.map((section) =>`
        <li><a target="_blank" rel="noopener noreferrer" href="${section.links.python}">Python ${section.type}</a></li>
        <li><a target="_blank" rel="noopener noreferrer" href="${section.links.java}">Java ${section.type}</a></li>
      </ul>
-   </div>
+   </div> 
 `).join("");
 if (footerContent){
   footerContent.innerHTML = footerChild;
@@ -281,7 +277,5 @@ const yearElement = document.querySelector("#live-year");
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
 }
-
-
 
 

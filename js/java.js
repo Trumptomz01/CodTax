@@ -1,4 +1,4 @@
-const javaCheatSheet= [
+export const javaCheatSheet= [
   { 
     heading: "Hello World", 
     id: "hello-world", 
@@ -655,4 +655,6 @@ javaCheatSheet.map((contents) => {
       </section>
    `
 }).join("");
-main.innerHTML = mainContainer;
+if (main) {
+   main.innerHTML = mainContainer;
+}
