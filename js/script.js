@@ -276,11 +276,11 @@ if (footerContent){
 const yearElement = document.querySelector("#live-year");
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
-}
+};
 
 import {htmlSections} from "../js/html.js";
 import {cssSections} from "../js/css.js";
-import { sections } from "../js/Javascript.js";
+import { sections } from "../js/javascript.js";
 import {  javaCheatSheet } from "../js/java.js";
 import { pythonCheat } from "../js/python.js";
 
@@ -359,7 +359,6 @@ function performSearch(){
 };
 
 const debouncedSearch = debounce(performSearch, 800);
-
 searchInput.addEventListener("input", (e) => {
    e.preventDefault();
    // show resultDiv
