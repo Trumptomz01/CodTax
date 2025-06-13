@@ -39,7 +39,7 @@ fetch('/app/navbar.html')
       } else {
         asideSection.style.display = 'flex';
         document.body.style.overflow = 'hidden';
-      }
+      };
       });
 
       document.body.addEventListener('click', (e) => {
@@ -49,19 +49,7 @@ fetch('/app/navbar.html')
           document.body.style.overflow = '';
         }
       });
-    }
-
-
-    
-    
-
-
-
-    
-    
-
-    console.log(asideSection);
-    console.log(document.querySelectorAll('.toggle-btn'));
+    };
 });
 window.addEventListener('load', () => {
   document.getElementById('loader').style.display = 'none';
