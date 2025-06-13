@@ -1,6 +1,4 @@
 const copyButtons = document.querySelectorAll('.copy-btn');
-console.log(copyButtons)
-
 copyButtons.forEach((btn) => {
   const defaultCopyText = document.querySelector("#button").innerHTML;
   btn.addEventListener("click", () => {
