@@ -371,6 +371,6 @@ searchInput.addEventListener("input", (e) => {
          searchResultsDiv.classList.add("slide-out");
          hideAnimation();
          searchInput.value = ""
-      }
+      };
    });
 });
