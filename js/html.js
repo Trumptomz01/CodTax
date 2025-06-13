@@ -234,11 +234,7 @@ export const htmlSections = [
    &lt;/html&gt;
    `
    },
-]
-
-
-
-
+];
 
 const main = document.querySelector("#page-content");
 let mainContainer = "";
@@ -260,4 +256,4 @@ htmlSections.map((contents) => {
 }).join("");
 if (main) {
    main.innerHTML = mainContainer;
-}
+};
