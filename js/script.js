@@ -1,7 +1,7 @@
 import {htmlSections} from "../js/html.js";
 import {cssSections} from "../js/css.js";
-import { sections } from "../js/javascript.js";
 import {  javaCheatSheet } from "../js/java.js";
+import { sections } from "../js/javascript.js";
 import { pythonCheat } from "../js/python.js";
 const quickSnippets = [
   {
@@ -284,6 +284,7 @@ if (yearElement) {
 };
 
 // search codes
+const searchButton = document.querySelector("#searchButton");
 const allSections = [...htmlSections, ...cssSections, ...sections, ...pythonCheat, ...javaCheatSheet];
 let searchInput = document.querySelector("#searchInput" );
 const searchResultsDiv = document.querySelector("#searchResults");
@@ -340,7 +341,7 @@ function performSearch(){
       const li = document.createElement("li");
       li.className = "list-li";
       li.innerHTML = `
-         <a href="${section.link}" class="list-link">
+         <a href="/app/${section.language}.html#${section.id}" class="list-link">
          <div class="search-head">
             <div class="search-id"><h3>${section.id.toUpperCase()}</h3></div>
             <div class="seperator"><i class="fa-solid fa-arrow-right-long"></i></div>
@@ -356,7 +357,10 @@ function performSearch(){
       searchLists.appendChild(li);
    });
 };
-
+document.querySelector("#searchButton").addEventListener("click", (e)=>{
+   e.preventDefault();
+   performSearch();
+});
 const debouncedSearch = debounce(performSearch, 800);
 searchInput.addEventListener("input", (e) => {
    e.preventDefault();
@@ -365,7 +369,7 @@ searchInput.addEventListener("input", (e) => {
    // 400ms delay before searching
    debouncedSearch();
    document.body.addEventListener("click", (e) => {
-      if (!searchResultsDiv.contains(e.target) && e.target !== searchInput) {
+      if (!searchResultsDiv.contains(e.target) && e.target !== searchInput && e.target !== searchButton && !searchButton.contains(e.target)){
          searchResultsDiv.classList.remove("fade-in");
          searchResultsDiv.classList.add("slide-out");
          hideAnimation();

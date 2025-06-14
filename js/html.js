@@ -2,6 +2,7 @@ export const htmlSections = [
    {
       heading: "Basic HTML Structure",          
       id: "html-structure",               
+      language: "html",
       paragraph:`Every HTML document starts with a standard structure including
             <code class="bold language-html">&lt;!DOCTYPE html&gt;</code>,
             <code class="bold language-html">&lt;html&gt;</code>,
@@ -22,6 +23,7 @@ export const htmlSections = [
    {
       heading: "How to create a form?",          
       id: "form-syntax",               
+      language: "html",
       paragraph:`In HTML, a form is a section of a webpage that allows users to input
             and submit data. It's created using the
             <b><code class="bold language-html"> &lt;form&gt;</code></b> tag and can contain
@@ -40,6 +42,7 @@ export const htmlSections = [
    {
       heading: "HTML Headings",          
       id: "headings",               
+      language: "html",
       paragraph:`HTML provides six levels of headings, from
             <code class="bold language-html">&lt;h1&gt;</code> (most important) to
             <code class="bold language-html">&lt;h6&gt;</code> (least important).`,
@@ -54,6 +57,7 @@ export const htmlSections = [
    {
       heading:"Creating Links",
       id:"links",
+      language: "html",
       paragraph:`Use the <code class="language-html">&lt;a&gt;</code> tag to create hyperlinks in HTML. Use
             <code class ="language-html">target="_blank"</code> to open in a new tab.`,
       code:`&lt;a href="https://example.com" target="_blank"&gt;Visit Example&lt;/a&gt;`
@@ -61,12 +65,14 @@ export const htmlSections = [
    {
       heading:"Adding Images",
       id:"images",
+      language: "html",
       paragraph:`The <code class="language-html">&lt;img&gt;</code> tag is used to embed images. Always use the <code class ="language-html">alt</code> attribute for accessibility.`,
       code:` &lt;img src="image.jpg" alt="Description" width="300"&gt;`
    },
    {
       heading:"HTML Lists",
       id:"lists",
+      language: "html",
       paragraph:`Use <code class="language-html">&lt;ul&gt;</code> for unordered lists and <code class="language-html">&lt;ol&gt;</code> for ordered lists. List items use <code class="language-html">&lt;li&gt;</code>.`,
       code:`  
    &lt;!-- Unordered List --&gt;
@@ -84,6 +90,7 @@ export const htmlSections = [
    {
       heading:"Creating Tables",
       id:"tables",
+      language: "html",
       paragraph:`Tables are created using <code class="language-html">&lt;table&gt;</code>, <code class="language-html">&lt;tr&gt;</code>, <code class="language-html">&lt;th&gt;</code>, and <code class="language-html">&lt;td&gt;</code>.`,
       code:`
    &lt;table border="1"&gt;
@@ -100,6 +107,7 @@ export const htmlSections = [
    {
       heading:"Adding Comments",
       id:"comments",
+      language: "html",
       paragraph:`Comments in HTML do not display in the browser and are used to explain code`,
       code:`&lt;!-- This is a comment in HTML --&gt;
 
@@ -108,6 +116,7 @@ export const htmlSections = [
    {
       heading:"How to create a navbar",
       id:"div-span",
+      language: "html",
       paragraph:`The <code class="language-html">&lt;ul&gt;</code> element creates an <strong>unordered list</strong> (bullet points) for navigation items. Each <code class="language-html">&lt;li&gt;</code> (list item) contains:  
          <br><br>
          <code class="language-html">&lt;a href="default.asp"&gt;Home&lt;/a&gt;</code> - Link to homepage (<code>default.asp</code>)<br>  
@@ -130,6 +139,7 @@ export const htmlSections = [
     {
       heading:"&lt;div&gt; and &lt;span&gt;",
       id:"navbar",
+      language: "html",
       paragraph:`<code class="language-html">&lt;div&gt;</code> is a block-level container, while <code class="language-html">&lt;span&gt;</code> is inline. Useful for grouping elements.`,
       code:`  
       &lt;div&gt;This is a block&lt;/div&gt;
@@ -138,6 +148,7 @@ export const htmlSections = [
    {
       heading:"Creating Buttons",
       id:"buttons",
+      language: "html",
       paragraph:`Use <code class="language-html">&lt;button&gt;</code> or <code class ="language-html">&lt;input type="button"&gt;</code> to create clickable buttons.`,
       code:`
    &lt;button&gt;Click Me&lt;/button&gt;
@@ -147,6 +158,7 @@ export const htmlSections = [
    {
       heading:"Embedding Video",
       id:"video-html",
+      language: "html",
       paragraph:`Use the <code class="language-html">&lt;video&gt;</code> tag with <code>controls</code> to add video playback support.`,
       code:`
    &lt;video width="320" height="240" controls&gt;
@@ -157,6 +169,7 @@ export const htmlSections = [
    {
       heading:"HTML Formatting Elements",
       id:"html-formatting",
+      language: "html",
       paragraph:`HTML formatting elements allow developers to style text with specific visual and semantic meanings.<br> Basic text styling includes <code class="language-html">&lt;b&gt;</code> for <b>bold</b> and <code class="language-html">&lt;i&gt;</code> for <i>italic</i> text, while semantic alternatives like <code class="language-html">&lt;strong&gt;</code> (for important content) and <code class="language-html">&lt;em&gt;</code> (for emphasized phrases) improve accessibility. For modifications, <code class="language-html">&lt;del&gt;</code> creates <del>strikethrough text</del>, <code class="language-html">&lt;ins&gt;</code> shows <ins>inserted content</ins>, and <code class="language-html">&lt;mark&gt;</code> <mark>highlights</mark> key sections. Technical content uses <code class="language-html">&lt;code&gt;</code> for <code>inline code</code>, <code class="language-html">&lt;pre&gt;</code> for preformatted blocks, and <code class="language-html">&lt;kbd&gt;</code> for keyboard inputs e.g<kbd> F5, alt + shift</kbd>`,
       code:`
    &lt;!-- Basic Text Styling --&gt;<br>
@@ -178,6 +191,7 @@ export const htmlSections = [
    {
       heading:"Semantic HTML Template",
       id:"semantic-temp",
+      language: "html",
       paragraph:`Semantic HTML uses meaningful tags like <code class="language-html">&lt;header&gt;</code>, <code class="language-html"> &lt;nav&gt;</code>, and <code class="language-html">&lt;article&gt;</code> to clearly define the structure and purpose of web content. This approach enhances accessibility for assistive technologies, improves SEO by helping search engines understand page content, and makes code more readable and maintainable for developers. Unlike generic tags such as <code class="language-html"> &lt;div&gt;</code> and <code class="language-html"> &lt;span&gt;</code>, semantic elements provide context, leading to better user experiences and more efficient web development.`,
       code:`
    &lt;!DOCTYPE html&gt;

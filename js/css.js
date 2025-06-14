@@ -6,7 +6,8 @@ export const cssSections = [
       code:` 
    selector {
       property: value;
-   }`
+   }`,
+      language: "css"
    },
    {
       heading:"CSS Selectors",
@@ -26,7 +27,8 @@ export const cssSections = [
    /* ID */
    #main { 
      background: yellow; 
-   } `
+   } `,
+      language: "css"
    },
    {
       heading:"CSS Colors",
@@ -38,7 +40,8 @@ export const cssSections = [
      color: #ff0000;
      color: rgb(255, 0, 0);
      color: hsl(0, 100%, 50%);
-   }`
+   }`,
+      language: "css"
    },
    {
       heading:"Font Styling",
@@ -50,7 +53,8 @@ export const cssSections = [
      font-size: 18px;
      font-weight: bold;
      font-style: italic;
-   }`
+   }`,
+      language: "css"
    },
    {
       heading:"CSS Box Model",
@@ -61,7 +65,8 @@ export const cssSections = [
      padding: 20px;
      border: 2px solid black;
      margin: 10px;
-   }`
+   }`,
+      language: "css"
    },
    {
       heading:"FlexBox Layout",
@@ -72,7 +77,8 @@ export const cssSections = [
      display: flex;
      justify-content: center;
      align-items: center;
-   }`
+   }`,
+      language: "css"
    },
    {
       heading:"CSS Grid Layout",
@@ -83,7 +89,8 @@ export const cssSections = [
      display: grid;
      grid-template-columns: repeat(3, 1fr);
      gap: 10px;
-   }`
+   }`,
+      language: "css"
    },
    {
       heading:"Hover Effects",
@@ -93,7 +100,8 @@ export const cssSections = [
    button:hover {
      background-color: blue;
      color: white;
-   }`
+   }`,
+      language: "css"
    },
    {
       heading:"CSS Transitions",
@@ -109,7 +117,8 @@ export const cssSections = [
    /* hover to see transition */
    .box:hover {
      background-color: orange;
-   }`
+   }`,
+      language: "css"
    },
    {
       heading:"Text Alignment",
@@ -118,7 +127,8 @@ export const cssSections = [
       code:`  
    p {
      text-align: center;
-   }`
+   }`,
+      language: "css"
    },
    {
       heading:"Background Styling",
@@ -130,7 +140,8 @@ export const cssSections = [
      background-image: url("image.jpg");
      background-size: cover;
      background-position: center;
-   }`
+   }`,
+      language: "css"
    },
    {
       heading:"Border Styling",
@@ -140,7 +151,8 @@ export const cssSections = [
     img {
      border: 2px solid black;
      border-radius: 10px;
-   }`
+   }`,
+      language: "css"
    },
    {
       heading:"Display Property",
@@ -153,7 +165,8 @@ export const cssSections = [
    
    div {
      display: inline;  /* Makes &lt;div&gt behave like inline: no line break, fits content width */
-   }`
+   }`,
+      language: "css"
    },
    {
       heading:"Positioning Elements",
@@ -165,7 +178,8 @@ export const cssSections = [
      position: absolute;   /* Positions .box relative to nearest positioned ancestor */
      top: 50px;  /* Moves 50px down from the top */
      left: 100px;   /* Moves 100px from the left */
-   }`
+   }`,
+      language: "css"
    },
    {
       heading:"Z-Index",
@@ -178,7 +192,8 @@ export const cssSections = [
    .popup {
      position: absolute;
      z-index: 10; /* Makes sure the popup stays on top of other elements */
-   }`
+   }`,
+      language: "css"
    },
    {
       heading:"Overflow in CSS",
@@ -191,7 +206,8 @@ export const cssSections = [
      width: 200px;
      height: 100px;
      overflow: scroll;
-   }` 
+   }`,
+      language: "css"
    },
    {
       heading:"Hide Elements",
@@ -205,7 +221,8 @@ export const cssSections = [
 
    .invisible {
      visibility: hidden;
-   }`
+   }`,
+      language: "css"
    },
    {
       heading:"Responsive Media Queries",
@@ -225,7 +242,8 @@ export const cssSections = [
          background-color: #ffffff; /* Changes background color for screens > 600px wide */
       }
    }
-      `
+      `,
+      language: "css"
    },
    {
       heading:"CSS Variables",
@@ -243,7 +261,8 @@ export const cssSections = [
 
    p {
      color: var(--secondary-color); /* Secondary color for paragraphs */ 
-   }`
+   }`,
+      language: "css"
    },
    {
       heading:"Centering an Element(div)",
@@ -256,7 +275,8 @@ export const cssSections = [
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-   }`
+   }`,
+      language: "css"
    },
    {
       heading:"Clearfix Hack",
@@ -268,7 +288,8 @@ export const cssSections = [
       content: "";
       display: table;
       clear: both;
-   }`
+   }`,
+      language: "css"
    },
    {
       heading:"Responsive Font Size",
@@ -278,7 +299,8 @@ export const cssSections = [
       body {
       font-size: 4vw;
       /* Sets font size to 4% of the viewport width */
-   }`
+   }`,
+      language: "css"
    },
      {
       heading:"Sticky Header",
@@ -290,7 +312,8 @@ export const cssSections = [
         position: sticky;
         top: 0;
         z-index: 1000;
-   }`
+   }`,
+      language: "css"
    },
    {
       heading:"Tooltip",
@@ -323,9 +346,10 @@ export const cssSections = [
    .tooltip:hover .tooltiptext {
       visibility: visible;
       opacity: 1;
-   }`
+   }`,
+      language: "css"
    },
-]
+];
 
 
 
