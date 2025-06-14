@@ -414,7 +414,7 @@ function hideMobileNav() {
       asideSection.style.display = 'none';
       document.body.style.overflow = '';
    }
-};
+}; 
 
 document.body.addEventListener('click', (e) => {
    // Only hide if asideSection is open and click is outside
@@ -423,5 +423,5 @@ document.body.addEventListener('click', (e) => {
    }
 });
 document.querySelector('#cancel-btn').addEventListener('click', ()=>{
-      hideMobileNav();
-})
+   hideMobileNav();
+});

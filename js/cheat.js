@@ -30,27 +30,36 @@ fetch('/app/navbar.html')
     });
     const menuBtn = document.querySelector('#mobile-nav-btn');
     const asideSection = document.querySelector('#aside-section');
-    if (menuBtn && asideSection) {
-      menuBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (asideSection.style.display === 'flex') {
+    // Helper function to hide mobile nav
+    function hideMobileNav() {
+      if (asideSection && asideSection.style.display === 'flex') {
         asideSection.style.display = 'none';
         document.body.style.overflow = '';
-      } else {
-        asideSection.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
       };
-      });
-
-      document.body.addEventListener('click', (e) => {
-      // Only hide if asideSection is open and click is outside
-        if ( asideSection.style.display === 'flex' && !asideSection.contains(e.target) && e.target !== menuBtn){
+    }; 
+    if (menuBtn && asideSection) {
+      menuBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (asideSection.style.display === 'flex') {
           asideSection.style.display = 'none';
           document.body.style.overflow = '';
+        } else {
+          asideSection.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        };
+      });
+      document.body.addEventListener('click', (e) => {
+      // Only hide if asideSection is open and click is outside
+        if (asideSection && asideSection.style.display === 'flex' && !asideSection.contains(e.target) && e.target !== menuBtn) {
+            hideMobileNav();
         }
       });
     };
+    document.querySelector('#cancel-btn').addEventListener('click', ()=>{
+       hideMobileNav();
+    });
 });
+
 window.addEventListener('load', () => {
   document.getElementById('loader').style.display = 'none';
   document.getElementById('page-content').style.display = 'block';
