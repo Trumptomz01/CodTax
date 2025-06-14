@@ -41,24 +41,44 @@
          <li><a href="">Blog</a></li>
          <li><a href="">Resources</a></li>
       </ul>
-      <button disabled class="mobile-nav-btn" id="mobile-nav-btn" type="button">Menu <i class="fa-solid fa-caret-down"></i></button>
+      <button class="mobile-nav-btn" id="mobile-nav-btn" type="button">Menu <i class="fa-solid fa-caret-down"></i></button>
       <button id="mobile-search-btn" class="mobile-search" type="button" aria-label="Open search">
          <i class="fa-solid fa-magnifying-glass"></i>
       </button>
-      <script>
-         document.getElementById('mobile-search-btn').addEventListener('click', function() {
-         const searchInput = document.getElementById('searchInput');
-         if (searchInput) {
-            searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            searchInput.focus();
-         }
-         });
-      </script>
    </nav>
+   <aside id="aside-section" class="aside-section">
+      <li><a class="brand" href="https://codtax.vercel.app/"><h1>CodeTax</h1></a></li> 
+      <ul class="mobile-nav-links">
+         <li class="drop-down">
+            <a href="#" class="toggle-btn">Frontend <i class="fa-solid fa-caret-down"></i></a>
+            <ul class="mobile-drop-down-content">
+               <li><a href="/app/html.html">HTML</a></li>
+               <li><a href="/app/css.html">CSS</a></li>
+               <li><a href="/app/javaScript.html">JavaScript</a></li> 
+            </ul>
+         </li>
+         <li class="drop-down">
+            <a href="#" class="toggle-btn">Backend <i class="fa-solid fa-caret-down"></i></a>
+            <ul class="mobile-drop-down-content">
+               <li><a href="/app/java.html">Java</a></li>
+               <li><a href="/app/python.html">Python</a></li>
+               <li><a href="/app/javaScript.html">JavaScript</a></li>
+            </ul>
+         </li>
+         <li class="ref-syn"><a href="">Syntaxes</a></li>
+         <li class="ref-syn"><a href="">References</a></li>
+      </ul>
+      <ul class="mobile-nav-links2">
+         <li class="ref-syn"><a href="">Contact</a></li>
+         <li class="ref-syn"><a href="">Blog</a></li>
+         <li class="ref-syn"><a href="">Resources</a></li>
+      </ul>
+      <button id="cancel-btn" class="cancel-nav"><i class="fa-solid fa-xmark"></i></button>
+   </aside>
    <main>
       <div class="search-section">
          <div id="search" class="search-bar">
-            <input type="search" class="search search-input" placeholder="Search CodeTax, e.g HTML" aria-label="Search documentation" autocomplete="off" id="searchInput">
+            <input type="search" class="search search-input" placeholder="Search CodeTax, e.g arrays, functions" aria-label="Search documentation" autocomplete="off" id="searchInput">
             <button title="search"  class=" search search-button" id="searchButton" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
          </div>
          <div id="searchResults" class="searchResults">
@@ -92,7 +112,7 @@
                <!-- the 3 boxes -->
             </div>
             <div class="cta-section">
-                  <a href="https://chat.whatsapp.com/your-community-link" target="_blank" rel="noopener noreferrer">
+                  <a href="" target="_blank" rel="noopener noreferrer">
                     <button class="cta-button" id="join-community-btn">
                       <i class="fas fa-rocket"></i> Join Now - It's Free
                     </button>

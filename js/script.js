@@ -1,3 +1,8 @@
+import {htmlSections} from "../js/html.js";
+import {cssSections} from "../js/css.js";
+import { sections } from "../js/javascript.js";
+import {  javaCheatSheet } from "../js/java.js";
+import { pythonCheat } from "../js/python.js";
 const quickSnippets = [
   {
     icon: "fa-brands fa-html5",
@@ -278,14 +283,8 @@ if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
 };
 
-import {htmlSections} from "../js/html.js";
-import {cssSections} from "../js/css.js";
-import { sections } from "../js/javascript.js";
-import {  javaCheatSheet } from "../js/java.js";
-import { pythonCheat } from "../js/python.js";
-
+// search codes
 const allSections = [...htmlSections, ...cssSections, ...sections, ...pythonCheat, ...javaCheatSheet];
-
 let searchInput = document.querySelector("#searchInput" );
 const searchResultsDiv = document.querySelector("#searchResults");
 const searchLists = document.querySelector("#searchLists");
@@ -341,10 +340,10 @@ function performSearch(){
       const li = document.createElement("li");
       li.className = "list-li";
       li.innerHTML = `
-         <a href="#${section.id}" class="list-link">
-            <div class="search-head">
-               <div class="search-id"><h3>${section.id.toUpperCase()}</h3></div>
-               <div class="seperator"><i class="fa-solid fa-arrow-right-long"></i></div>
+         <a href="${section.link}" class="list-link">
+         <div class="search-head">
+            <div class="search-id"><h3>${section.id.toUpperCase()}</h3></div>
+            <div class="seperator"><i class="fa-solid fa-arrow-right-long"></i></div>
                <div class="search-header"><p>${section.heading}</p></div>
             </div>
             <div class="search-p">
@@ -374,3 +373,55 @@ searchInput.addEventListener("input", (e) => {
       };
    });
 });
+
+// search
+document.getElementById('mobile-search-btn').addEventListener('click', function() {
+   const searchInput = document.getElementById('searchInput');
+   if (searchInput) {
+      searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      searchInput.focus();
+   }
+});
+
+// aside
+document.querySelectorAll('.toggle-btn').forEach((btn) => {
+   btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const parent = btn.parentElement;
+      parent.classList.toggle('active');
+   });
+});
+
+const menuBtn = document.querySelector('#mobile-nav-btn');
+const asideSection = document.querySelector('#aside-section');
+
+if (menuBtn && asideSection){
+   menuBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (asideSection.style.display === 'flex') {
+         asideSection.style.display = 'none';
+         document.body.style.overflow = '';
+      } else {
+         asideSection.style.display = 'flex';
+         document.body.style.overflow = 'hidden';
+      };
+   });
+};
+
+// Helper function to hide mobile nav
+function hideMobileNav() {
+   if (asideSection && asideSection.style.display === 'flex') {
+      asideSection.style.display = 'none';
+      document.body.style.overflow = '';
+   }
+};
+
+document.body.addEventListener('click', (e) => {
+   // Only hide if asideSection is open and click is outside
+   if (asideSection && asideSection.style.display === 'flex' && !asideSection.contains(e.target) && e.target !== menuBtn) {
+      hideMobileNav();
+   }
+});
+document.querySelector('#cancel-btn').addEventListener('click', ()=>{
+      hideMobileNav();
+})

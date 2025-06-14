@@ -900,3 +900,95 @@ footer{
    100% { opacity: 0; scale:0.8; transform: translateY(10px); }
   } 
 .slide-out { animation: slide-out 0.3s ease-in forwards; }
+.aside-section{
+  display:none;
+  z-index: 1000;
+  flex-direction: column;
+  gap:15px;
+  position:fixed;
+  left: 0;
+  top: 0;
+  padding-top: 1rem;
+  padding-inline: 1rem;
+  min-width: 60%;
+  height: 100%;
+  overflow-y: scroll;
+  border-right: 1px solid #bdbdbd2c;
+  background-color: #0c0c0cde;
+  backdrop-filter: blur(6px);
+}
+.aside-section::-webkit-scrollbar{
+  width: 5px;
+  background: transparent;
+}
+.aside-section a{
+  text-decoration: none;
+  color: #bdbdbd;
+  font-size: 1.1rem;
+
+}
+.aside-section li  h1 {
+  font-size: 24px;
+  color: #dcf804; 
+  margin-bottom: 10px; 
+}
+.aside-section ul  {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.mobile-drop-down-content {
+  display: none !important;
+  list-style: none;
+  padding: 1rem;
+  border-bottom: 1px solid #bdbdbd29;
+}
+.mobile-drop-down-content li{
+  padding: 0.5rem;
+  transition: all 0.3 ease-in-out;
+}
+.mobile-drop-down-content li:hover{
+  background-color: #000;
+  border-radius: 10px;
+}
+
+.drop-down.active .mobile-drop-down-content { display: block !important; }
+.ref-syn{
+  padding: 0.8rem;
+  border-radius: 10px;
+}
+.ref-syn:hover{background-color: #000;}
+aside li{list-style: none; width: fit-content;}
+.cancel-nav{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(135deg, #dcf804 60%, #1b1b1b 100%);
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #181818;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(220, 248, 4, 0.08), 0 1.5px 6px rgba(0,0,0,0.18);
+  transition: 
+    background 0.2s cubic-bezier(.4,0,.2,1),
+    color 0.2s,
+    box-shadow 0.2s,
+    transform 0.15s;
+}
+.cancel-nav:hover {
+  background: linear-gradient(135deg, #1b1b1b 60%, #dcf804 100%);
+  color: #dcf804;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.28);
+  transform: scale(1.1) rotate(-10deg);
+}
+.cancel-nav:active {
+  transform: scale(0.9) rotate(2deg);
+  background: #232323;
+  color: #dcf804;
+}
